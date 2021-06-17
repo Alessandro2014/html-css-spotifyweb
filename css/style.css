@@ -4,13 +4,16 @@
     margin: 0;
 }
 
+    /* UTILS */
 body {
     position: relative;
 }
 
+/* <!-- HEADER --> */
+
 #top-bar {
     height: 80px;
-    width: calc(100% - 100px);
+    width: calc(100% - 50px);
     position: fixed;
     top: 0;
     right: 0;
@@ -19,15 +22,37 @@ body {
     line-height: 80px;
 }
 
-#sidebar {
+#btt-upgrade {
+    color: white;
+    border: 1px solid white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+
+/* <!-- NAV-BAR --> */
+
+#nav-bar {
     position: fixed;
     top: 0;
     left: 0;
     height: calc(100% - 80px);
-    width: 100px;
+    width: 50px;
     background-color: black;
     color: gray
 }
+
+/* <!-- MAIN --> */
+
+main {
+    overflow: scroll x;
+    background-color: rgb(11, 5, 37);
+    color: white;
+    padding: 80px 10px 80px 60px;
+}
+
+/* <!-- FOOTER --> */
 
 #bottom-bar {
     position: fixed;
@@ -38,18 +63,4 @@ body {
     background-color: rgb(48, 48, 48);
 }
 
-main {
-    overflow: scroll x;
-    background-color: rgb(11, 5, 37);
-    color: white;
-    padding: 80px 10px 80px 110px;
-}
-
-#btt-upgrade {
-    color: white;
-    border: 1px solid white;
-    padding: 5px 20px;
-    border-radius: 20px;
-    margin-right: 10px;
-}
 

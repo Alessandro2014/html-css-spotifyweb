@@ -78,6 +78,7 @@ main {
     height: 30px;
     line-height: 30px;
     font-size: 0.5em;
+    font-weight: 700;
 }
 
 section:not(.section-genres) {
@@ -87,7 +88,7 @@ section:not(.section-genres) {
 section .row img {
     height: 80%;
     width: 100%;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 section:not(.section-genres) .row > div {
@@ -116,11 +117,8 @@ section h3 {
     height: 70px;
     width: 100%;
     background-color: rgb(39, 39, 39);
-}
+    padding-top: 10px;
 
-#bottom-bar .row {
-    flex-wrap: nowrap;
-    
 }
 
 #bottom-bar img {
@@ -129,19 +127,19 @@ section h3 {
 }
 
 #bottom-bar div  {
-    font-size: 0.8em;
+    font-size: 1em;
     color: white;
-    text-align: center;
+    align-items: center;
 }
 
-#bottom-bar i {
- font-size: 1.5em;
+#bottom-bar .btt-controls i {
+    margin: 0 5%;
 }
 
-#time-bar {
+#time-bar  {
     display: inline-block;
     margin: 0 5px;
-    width: 70px;
+    width: 150px;
     height: 3px;
     background-color: rgb(104, 104, 104);
     border-radius: 2px;
@@ -149,16 +147,22 @@ section h3 {
 
 #volume-bar {
     display: inline-block;
-    width: 50px;
+    width: 60px;
     height: 3px;
     background-color: rgb(104, 104, 104);
     border-radius: 2px;
 }
 
-.far {
-    margin:0 10px;
+h4 {
+    font-size: 0.8em;
 }
 
-.fa-heart, .fa-folder {
+.far {
+    font-size: 1.7em; 
+}
+
+.fa-heart, .fa-folder, p {
     color: gray;
+    font-size: 0.8em;
+    display: block;
 }

@@ -4,10 +4,13 @@
     margin: 0;
 }
 
-    /* UTILS */
 body {
     position: relative;
     font-family: 'Montserrat', sans-serif;;
+}
+
+*ul {
+    list-style-type: none;
 }
 
 /* <!-- HEADER --> */
@@ -31,7 +34,6 @@ body {
     margin-right: 20px;
 }
 
-
 /* <!-- NAV-BAR --> */
 
 #nav-bar {
@@ -42,25 +44,34 @@ body {
     width: 50px;
     background-color: black;
     color: gray;
-    display: flex;
-    flex-direction: column;
+    padding: 10px;
 }
+
 #nav-bar img {
     height: 30px;
     width: auto;
 }
 
-#nav-bar div > ul {
-    list-style-type: none;
-    padding: 10px;
-
-}
-.profile span {
-    padding: 18px 5px 3px;
+.profile li div {
+    padding: 5px 5px;
     background-color: gray;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
+.profile {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+.profile li:first-of-type {
+    margin-bottom: 10px;
+}
+
+#nav-bar span, h4, .menu-playlist {
+    display: none;
+}
 
 /* <!-- MAIN --> */
 
@@ -77,7 +88,7 @@ main {
     text-transform: uppercase;
     height: 30px;
     line-height: 30px;
-    font-size: 0.5em;
+    font-size: 0.7em;
     font-weight: 700;
 }
 
@@ -95,9 +106,6 @@ section:not(.section-genres) .row > div {
     margin-top: 20px;
 }
 
-.album-for-you h1 {
-    margin-top: 20px;
-}
 
 section .row h2 {
     margin: 5px 0;
@@ -166,3 +174,72 @@ h4 {
     font-size: 0.8em;
     display: block;
 }
+
+.btt-controls i:nth-child(2){
+    transform: rotate(180deg);
+}
+
+
+/* BREAKPOINT SM */
+@media screen and (min-width: 576px) {
+    #nav-bar {
+        width: 200px;
+    }
+
+    #top-bar {
+        width: calc(100% - 200px);
+    }
+
+    main {
+        padding-left: 210px;
+    }
+
+    #nav-bar span, h4, .menu-playlist {
+        display: initial;
+    }
+
+    .menu ul li:nth-child(1) {
+        margin: 10px 0 20px 0;
+    }
+
+    #logo-small {
+        display: none;
+    }
+
+    #nav-bar h4 {
+        color: white;
+        font-weight: 900;
+        font-size: 0.8em;
+    }
+
+    .profile li div {
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    .fa-plus-square {
+        font-size: 45px;
+    }
+
+    .menu-playlist li {
+        line-height: 30px;
+    }
+
+    hr{
+        width: 180px; 
+    }
+
+
+    
+
+}
+
+/* BREAKPOINT MD */
+
+
+/* BREAKPOINT LG */
+/* .album-foryou > .row{
+    margin-top: 60px;
+
+    sistemare spazio tra titolo e album
+} */

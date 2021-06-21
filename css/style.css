@@ -1,3 +1,5 @@
+/* UTILS */
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -9,7 +11,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-*ul {
+ul {
     list-style-type: none;
 }
 
@@ -23,16 +25,22 @@ body {
     right: 0;
     background-color: rgba(0, 0, 0, 0.4);
     text-align: right;
-    line-height: 70px;
 }
 
 #btt-upgrade {
     font-size: 0.7em;
     color: white;
     border: 1px solid white;
-    padding: 10px 25px;
+    padding: 7px 15px;
     border-radius: 20px;
     margin-right: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#btt-upgrade:hover {
+    transform: scale(1.1);
 }
 
 /* <!-- NAV-BAR --> */
@@ -54,7 +62,7 @@ body {
 }
 
 .profile li div {
-    padding: 2px 5px;
+    padding: 0px 4px;
     background-color: gray;
     border-radius: 50%;
 }
@@ -62,14 +70,20 @@ body {
 .profile {
     position: absolute;
     bottom: 0;
-    left: 10px;
+    left: 8px;
 }
 
 .profile li:first-of-type {
     margin-bottom: 10px;
 }
 
-#nav-bar span, h4, .menu-playlist {
+#nav-bar li:hover, #nav-bar li a:hover,
+.fa-heart:hover,.fa-folder:hover,
+p:hover {
+    color: white;
+}
+
+#nav-bar span, h4, a, .menu-playlist {
     display: none;
 }
 
@@ -83,38 +97,74 @@ main {
     padding: 70px 10px 0 60px;
 }
 
+.section-genres {
+    margin-top: 20px;
+}
+
 .section-genres > div {
     color: gray;
     text-transform: uppercase;
     height: 30px;
-    line-height: 30px;
     font-size: 0.7em;
     font-weight: 700;
 }
 
+.menu ul li:first-of-type {
+    margin-bottom: 25px;
+}
+
+.album-popular .row div img{
+    border-radius: 50%;
+}
+
 section:not(.section-genres) {
     font-size: 0.6em;
+    position: relative;
+}
+
+.section-genres > div:hover {
+    color: white;
 }
 
 section .row img {
-    height: 100%;
-    width: 100%;
-    padding-right: 10px;
+    max-width: 100%;
+    padding-right: 15px;
 }
 
 section:not(.section-genres) .row > div {
-    margin-top: 20px;
+    margin-top: 15px;
 }
-
 
 section .row h2 {
     margin: 5px 0;
-    line-height: 15px;
 }
 
 section h3 {
     color: gray;
 }
+
+main h1 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+/* section img:hover {
+    filter: grayscale(1);
+}
+
+section .fa-play-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(50% - 50%);
+    display: non;
+    z-index: 1;
+} */
+
+#album-recently img:hover .fa-play-circle {
+    
+}
+
 
 /* <!-- FOOTER --> */
 
@@ -140,17 +190,22 @@ section h3 {
     align-items: center;
 }
 
-#bottom-bar i {
-    margin: 0 5%;
-}
-
 #time-bar  {
     display: inline-block;
     margin: 0 5px;
-    width: 150px;
+    width: 60%;
     height: 3px;
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(92, 91, 91);
     border-radius: 2px;
+}
+
+.progressive-time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: lightgray;
+    z-index: 1;
 }
 
 #volume-bar {
@@ -161,17 +216,21 @@ section h3 {
     border-radius: 2px;
 }
 
-h4 {
+#bottom-bar h4 {
     font-size: 0.8em;
 }
 
-.far {
+.fa-play-circle {
     font-size: 1.7em; 
+}
+
+.fa-play-circle:hover {
+    transform: scale(1.2);
 }
 
 .fa-heart, .fa-folder, p {
     color: gray;
-    font-size: 0.8em;
+    font-size: 0.7em;
     display: block;
 }
 
@@ -194,15 +253,21 @@ h4 {
         width: 200px;
     }
 
-    .menu ul li:nth-child(1) {
-        margin: 10px 0 20px 0;
+    .menu ul li:first-of-type {
+        margin-bottom: 30px;
+    }
+
+    #nav-bar li {
+        display: flex;
+        align-items: center;
+        font-size: 0.8em;
     }
 
     #logo-small {
         display: none;
     }
 
-    #nav-bar span, h4, .menu-playlist {
+    #nav-bar span, h4, a, .menu-playlist {
         display: initial;
     }
     
@@ -221,11 +286,12 @@ h4 {
         font-size: 45px;
     }
 
-    .menu-playlist li {
-        font-size: 0.8em;
+    #nav-bar li a {
+        color: gray;
+        text-decoration: none;
     }
 
-    #nav-bar h4,li {
+    #nav-bar h4, li {
     margin: 15px 0 ;        
     }
 
@@ -239,9 +305,23 @@ h4 {
         padding-left: 210px;
     } 
 
+    /* FOOTER */
+
+    .fa-heart, .fa-folder, p, h4 {
+        font-size: 0.8em;
+        display: inline;
+    }
+
+
 }
 
 /* BREAKPOINT MD */
+@media screen and (min-width: 768px) {
+    #bottom-bar i {
+        margin: 0 5%;
+    }
+}
+
 
 
 /* BREAKPOINT LG */

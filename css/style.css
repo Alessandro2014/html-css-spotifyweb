@@ -197,6 +197,7 @@ section .fa-play-circle {
     height: 3px;
     background-color: rgb(92, 91, 91);
     border-radius: 2px;
+    position: relative;
 }
 
 .progressive-time {
@@ -204,8 +205,25 @@ section .fa-play-circle {
     top: 0;
     left: 0;
     height: 100%;
+    width: 40%;
     background-color: lightgray;
-    z-index: 1;
+    border-radius: 5px;
+}
+
+.progressive-time:hover {
+    background-color: lime;
+}
+
+#time-bar:hover .marker {
+    position: absolute;
+    top: -4px;
+    left: 40%;
+    transform: translate(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: lightgray;
+    border-radius: 5px;
 }
 
 #volume-bar {
@@ -215,6 +233,32 @@ section .fa-play-circle {
     background-color: rgb(104, 104, 104);
     border-radius: 2px;
 }
+
+/* .progressive-volume {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.progressive-volume:hover {
+    background-color: lime;
+}
+
+#volume-bar:hover .marker-volume {
+    position: absolute;
+    top: -4px;
+    left: 40%;
+    transform: translate(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: lightgray;
+    border-radius: 5px;
+} */
 
 #bottom-bar h4 {
     font-size: 0.8em;

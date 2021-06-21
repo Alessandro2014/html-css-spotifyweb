@@ -25,6 +25,7 @@ ul {
     right: 0;
     background-color: rgba(0, 0, 0, 0.4);
     text-align: right;
+    z-index: 1;
 }
 
 #btt-upgrade {
@@ -71,6 +72,7 @@ ul {
     position: absolute;
     bottom: 0;
     left: 8px;
+    background-color: black;
 }
 
 .profile li:first-of-type {
@@ -133,6 +135,7 @@ section .row img {
 
 section:not(.section-genres) .row > div {
     margin-top: 15px;
+    position: relative;
 }
 
 section .row h2 {
@@ -148,18 +151,20 @@ main h1 {
     margin-top: 10px;
 }
 
-/* section img:hover {
-    filter: grayscale(1);
+.img-album img:hover {
+    opacity: 0.4;
 }
 
 section .fa-play-circle {
+    font-size: 40px;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(50% - 50%);
-    display: non;
-    z-index: 1;
-} */
+    left: 60px;
+    top: 60px;
+}
+
+section .fa-play-circle:hover {
+    display: initial;
+}
 
 #album-recently img:hover .fa-play-circle {
     
@@ -200,7 +205,8 @@ section .fa-play-circle {
     position: relative;
 }
 
-.progressive-time {
+.progressive-time,
+.progressive-volume {
     position: absolute;
     top: 0;
     left: 0;
@@ -210,11 +216,13 @@ section .fa-play-circle {
     border-radius: 5px;
 }
 
-.progressive-time:hover {
+.progressive-time:hover,
+.progressive-volume:hover {
     background-color: lime;
 }
 
-#time-bar:hover .marker {
+#time-bar:hover .marker,
+#volume-bar:hover .marker-volume {
     position: absolute;
     top: -4px;
     left: 40%;
@@ -235,32 +243,6 @@ section .fa-play-circle {
     position: relative;
 }
 
-.progressive-volume {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 40%;
-    background-color: lightgray;
-    border-radius: 5px;
-}
-
-.progressive-volume:hover {
-    background-color: lime;
-}
-
-#volume-bar:hover .marker-volume {
-    position: absolute;
-    top: -4px;
-    left: 40%;
-    transform: translate(-50%);
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    background-color: lightgray;
-    border-radius: 5px;
-}
-
 #bottom-bar h4 {
     font-size: 0.8em;
 }
@@ -269,7 +251,7 @@ section .fa-play-circle {
     font-size: 1.7em; 
 }
 
-.fa-play-circle:hover {
+#bottom-bar .fa-play-circle:hover {
     transform: scale(1.2);
 }
 
@@ -366,8 +348,3 @@ section .fa-play-circle {
         margin: 0 5%;
     }
 }
-
-
-
-/* BREAKPOINT LG */
-

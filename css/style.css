@@ -62,6 +62,10 @@ ul {
     width: auto;
 }
 
+.menu .evidenced-nav {
+    border-left: 2px solid lime;
+}
+
 .profile li div {
     padding: 0px 4px;
     background-color: gray;
@@ -85,7 +89,7 @@ p:hover {
     color: white;
 }
 
-#nav-bar span, h4, a, .menu-playlist {
+#nav-bar span, #logo, h4, a, .menu-playlist {
     display: none;
 }
 
@@ -101,6 +105,14 @@ main {
 
 .section-genres {
     margin-top: 20px;
+}
+.section-genres .evidenced::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 2px;
+    background-color: lime;
+    margin: 4px auto;
 }
 
 .section-genres > div {
@@ -135,7 +147,6 @@ section .row img {
 
 section:not(.section-genres) .row > div {
     margin-top: 15px;
-    position: relative;
 }
 
 section .row h2 {
@@ -155,19 +166,20 @@ main h1 {
     opacity: 0.4;
 }
 
+.img-album {
+    position: relative;
+}
+
 section .fa-play-circle {
     font-size: 40px;
     position: absolute;
-    left: 60px;
-    top: 60px;
+    left: 35%;
+    top: 20%;
+    display: none;
 }
 
-section .fa-play-circle:hover {
-    display: initial;
-}
-
-#album-recently img:hover .fa-play-circle {
-    
+.img-album:hover .fa-play-circle {
+    display: inline;
 }
 
 
@@ -280,8 +292,8 @@ section .fa-play-circle:hover {
         width: 200px;
     }
 
-    .menu ul li:first-of-type {
-        margin-bottom: 30px;
+    .menu li:first-of-type {
+        margin-top: 0;
     }
 
     #nav-bar li {
@@ -294,7 +306,12 @@ section .fa-play-circle:hover {
         display: none;
     }
 
-    #nav-bar span, h4, a, .menu-playlist {
+    #logo img {
+        height: 40px;
+    }
+    
+
+    #nav-bar span, #logo, h4, a, .menu-playlist {
         display: initial;
     }
     

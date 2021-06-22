@@ -23,10 +23,10 @@
     <!-- NAV-BAR -->
     <nav id="nav-bar">
       <div class="menu">
-        <div><img src="./img/logo.svg" alt=""></div>
+        <div id="logo"><img src="./img/logo.svg" alt=""></div>
         <ul>
           <li><img id="logo-small" src="./img/logo-small.svg" alt="logo"></li>
-          <li><img src="./img/home.svg" alt="home"><a href="#">Home</a></li>
+          <li class="evidenced-nav"><img src="./img/home.svg" alt="home"><a href="#">Home</a></li>
           <li><img src="./img/search.svg" alt="search"><a href="#">Cerca</a></li>
           <li><img src="./img/libreria.svg" alt="libreria"><a href="#">La tua libreria</a></li>
         </ul>
@@ -55,7 +55,7 @@
       <!-- MAIN -->
     <main>
       <section class="section-genres row center-xs">
-          <div class="col-xs-3 col-sm-4 col-md-2 col-lg-2 txt-center-xs">in evidenza</div>
+          <div class="evidenced col-xs-3 col-sm-4 col-md-2 col-lg-2 txt-center-xs">in evidenza</div>
           <div class="col-xs-3 col-sm-4 col-md-2 col-lg-2 txt-center-xs">podcast</div>
           <div class="col-xs-3 col-sm-4 col-md-2 col-lg-2 txt-center-xs">classifiche</div>
           <div class="col-xs-3 col-sm-4 col-md-2 col-lg-2 txt-center-xs s">generi e mood</div>
@@ -72,22 +72,27 @@
             <h3>Subtitle</h3>
           </div>
           <div class="img-album col-xs-6 col-md-3 col-lg-2 txt-center-xs"><img src="./img/stranger.jpeg" alt="">
+            <i class="far fa-play-circle"></i>
             <h2>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h2>
             <h3>Kyle Dixon & Michael Stein</h3>
           </div>
           <div class="img-album col-xs-6 col-sm-6 col-md-3 col-lg-2 txt-center-xs"><img src="./img/aquietplace.jpeg" alt="">
+            <i class="far fa-play-circle"></i>
             <h2>A quiet place</h2>
             <h3>Subtitle</h3>
           </div>
           <div class="img-album col-xs-6 col-sm-6 col-md-3 col-lg-2 txt-center-xs"><img src="./img/split.jpeg" alt="">
+            <i class="far fa-play-circle"></i>
             <h2>Split</h2>
             <h3>Subtitle</h3>
           </div>
           <div class="img-album col-xs-6 col-sm-6 col-md-3 col-lg-2 txt-center-xs"><img src="./img/cure.jpeg" alt="">
+            <i class="far fa-play-circle"></i>
             <h2>A cure for wellness</h2>
             <h3>Subtitle</h3>
           </div>
           <div class="img-album col-xs-6 col-sm-6 col-md-3 col-lg-2 txt-center-xs"><img src="./img/sinister.jpeg" alt="">
+            <i class="far fa-play-circle"></i>
             <h2>Sinister</h2>
             <h3>Subtitle</h3>
           </div>
@@ -99,9 +104,14 @@
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1>Creato per John Doe</h1></div>
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h3>Più ascolti, più accurati saranno i suggerimenti.</h3></div>
           <div class="img-album col-xs-6 col-sm-6 col-md-3 col-lg-2 txt-center-xs">
-            <img src="./img/radar.jpeg" alt=""><h2>Release Radar</h2></div>
+            <img src="./img/radar.jpeg" alt="">            
+            <i class="far fa-play-circle"></i>
+            <h2>Release Radar</h2></div>
           <div class="img-album col-xs-6 col-sm-6 col-md-3 col-lg-2">
-            <img src="./img/mixdaily.jpeg" alt=""><h2>Daily Mix 1</h2></div>
+            <img src="./img/mixdaily.jpeg" alt="">
+            <i class="far fa-play-circle"></i>
+
+            <h2>Daily Mix 1</h2></div>
         </div>
       </section>
 
